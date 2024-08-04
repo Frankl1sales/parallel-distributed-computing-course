@@ -1,0 +1,7 @@
+obtenha o executável
+gcc -fopenmp teste.c -lpthread -o teste
+
+execute
+./teste
+
+

@@ -1,7 +1,3 @@
-Claro! Aqui está um exemplo de um `README.md` para o seu projeto:
-
----
-
 # Video Transcoding with OpenMP
 
 This project demonstrates how to transcode videos into different resolutions using the FFmpeg library, leveraging parallel processing with OpenMP. The program accepts multiple resolution targets and transcodes the input video into those resolutions concurrently.
@@ -108,10 +104,3 @@ This will transcode `input_video.mp4` into `1920x1080`, `1280x720`, and `640x480
 
 Contributions are welcome! Please fork this repository, create a feature branch, and submit a pull request.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-This `README.md` provides an overview of your project, how to use it, and how to get started. Make sure to update the repository URL and other placeholders with your specific project details.

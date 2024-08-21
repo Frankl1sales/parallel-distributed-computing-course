@@ -81,7 +81,7 @@ int main(int argc, char** argv) {
 
     // Definindo diferentes níveis de compressão para cada processo
     int compress_qualities[] = {23, 28, 35, 40};  // Exemplo de diferentes qualidades de compressão
-    int segment_duration = 76;  // Duração de cada segmento em segundos (ajuste conforme necessário)
+    int segment_duration = 67;  // Duração de cada segmento em segundos (ajuste conforme necessário)
 
     // Definindo o nome do arquivo de log único
     const char* log_filename = "compression_log.txt";

@@ -31,3 +31,36 @@
 [2024-08-20 22:30:58] [Rank 3] Processamento finalizado
 [2024-08-20 22:30:58] [Rank 0] Segmento 3 processado com CRF 40 pelo rank 3
 [2024-08-20 22:30:58] [Rank 0] Processamento finalizado
+[2024-08-20 22:48:51] [Rank 0] Iniciando processamento
+[2024-08-20 22:48:51] [Rank 0] Distribuindo trabalho para outros processos MPI
+[2024-08-20 22:48:51] [Rank 2] Iniciando processamento
+[2024-08-20 22:48:51] [Rank 1] Iniciando processamento
+[2024-08-20 22:48:51] [Rank 3] Iniciando processamento
+[2024-08-20 22:48:51] [Rank 0] Enviado tempo de início 67 para o rank 1
+[2024-08-20 22:48:51] [Rank 1] Recebido CRF 28 para compressão, tempo de início 67
+[2024-08-20 22:48:51] [Rank 0] Enviado tempo de início 134 para o rank 2
+[2024-08-20 22:48:51] [Rank 2] Recebido CRF 35 para compressão, tempo de início 134
+[2024-08-20 22:48:51] [Rank 0] Enviado tempo de início 201 para o rank 3
+[2024-08-20 22:48:51] [Rank 0] Processando segmento no nó mestre
+[2024-08-20 22:48:51] [Rank 3] Recebido CRF 40 para compressão, tempo de início 201
+[2024-08-20 22:48:51] [Rank 0] Executando comando: ffmpeg -i input.mp4 -ss 0 -t 67 -vcodec libx264 -crf 23 output_segment_0.mp4
+[2024-08-20 22:48:51] [Rank 1 - Thread 0] Iniciando compressão com OpenMP
+[2024-08-20 22:48:51] [Rank 1] Executando comando: ffmpeg -i input.mp4 -ss 67 -t 67 -vcodec libx264 -crf 28 output_segment_1.mp4
+[2024-08-20 22:48:51] [Rank 2 - Thread 0] Iniciando compressão com OpenMP
+[2024-08-20 22:48:51] [Rank 3 - Thread 0] Iniciando compressão com OpenMP
+[2024-08-20 22:48:51] [Rank 2] Executando comando: ffmpeg -i input.mp4 -ss 134 -t 67 -vcodec libx264 -crf 35 output_segment_2.mp4
+[2024-08-20 22:48:51] [Rank 3] Executando comando: ffmpeg -i input.mp4 -ss 201 -t 67 -vcodec libx264 -crf 40 output_segment_3.mp4
+[2024-08-20 22:49:10] [Rank 0] Compressão concluída para output_segment_0.mp4 em 19.00 segundos
+[2024-08-20 22:49:13] [Rank 1] Compressão concluída para output_segment_1.mp4 em 22.00 segundos
+[2024-08-20 22:49:13] [Rank 1 - Thread 0] Notificando nó mestre sobre a conclusão da compressão
+[2024-08-20 22:49:13] [Rank 0] Segmento 1 processado com CRF 28 pelo rank 1
+[2024-08-20 22:49:13] [Rank 1] Processamento finalizado
+[2024-08-20 22:49:14] [Rank 2] Compressão concluída para output_segment_2.mp4 em 23.00 segundos
+[2024-08-20 22:49:14] [Rank 2 - Thread 0] Notificando nó mestre sobre a conclusão da compressão
+[2024-08-20 22:49:14] [Rank 0] Segmento 2 processado com CRF 35 pelo rank 2
+[2024-08-20 22:49:14] [Rank 2] Processamento finalizado
+[2024-08-20 22:49:16] [Rank 3] Compressão concluída para output_segment_3.mp4 em 25.00 segundos
+[2024-08-20 22:49:16] [Rank 3 - Thread 0] Notificando nó mestre sobre a conclusão da compressão
+[2024-08-20 22:49:16] [Rank 0] Segmento 3 processado com CRF 40 pelo rank 3
+[2024-08-20 22:49:16] [Rank 0] Processamento finalizado
+[2024-08-20 22:49:16] [Rank 3] Processamento finalizado

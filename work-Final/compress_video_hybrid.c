@@ -85,8 +85,18 @@ int main(int argc, char** argv) {
 
     // Definindo o nome do arquivo de log único
     const char* log_filename = "compression_log.txt";
+
+    // Tempo de início geral
+    if (world_rank == 0) {
+        char start_time_str[100];
+        get_current_time_str(start_time_str, sizeof(start_time_str));
+        log_message(log_filename, world_rank, -1, "Início do processamento geral");
+        log_message(log_filename, world_rank, -1, start_time_str);
+    }
     
-    // Início do log
+    MPI_Barrier(MPI_COMM_WORLD); // Sincronizar todos os processos antes de começar
+
+    // Início do log para o processamento específico
     log_message(log_filename, world_rank, -1, "Iniciando processamento");
 
     if (world_rank == 0) {
@@ -113,6 +123,12 @@ int main(int argc, char** argv) {
             snprintf(log_msg, sizeof(log_msg), "Segmento %d processado com CRF %d pelo rank %d", segment, compress_qualities[i], i);
             log_message(log_filename, world_rank, -1, log_msg);
         }
+        
+        // Tempo de término geral
+        char end_time_str[100];
+        get_current_time_str(end_time_str, sizeof(end_time_str));
+        log_message(log_filename, world_rank, -1, "Fim do processamento geral");
+        log_message(log_filename, world_rank, -1, end_time_str);
     } else {
         int quality;
         MPI_Recv(&quality, 1, MPI_INT, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
